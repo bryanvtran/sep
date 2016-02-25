@@ -35,6 +35,10 @@ hr.secondary {
   border-width: 1px;
 }
 
+hr.caption {
+  margin: 0;
+}
+
 p {
     font-family: 'Crimson Text', serif;
     color: #111;
@@ -151,7 +155,11 @@ section {
 .dropdown-menu a:focus
 .dropdown-menu a:active {
     background-color: transparent;
-    color: #ccc;
+    color: #eee;
+}
+
+.dropdown:hover .dropdown-menu {
+display: block;
 }
 
 /* responsive nav */
@@ -180,7 +188,7 @@ section {
 
     .navbar-default .nav > li>a:hover,
     .navbar-default .nav>li>a:focus:hover {
-        color: #ccc;
+        color: #666;
     }
 
 }
@@ -214,7 +222,7 @@ section {
 
     .navbar-default .nav > li>a:hover,
     .navbar-default .nav>li>a:focus:hover {
-        color: #ccc;
+        color: #eee;
     }
 
     .logo-mobile {
@@ -350,12 +358,6 @@ header .header-content .inner p {
     line-height: 18px;
 }
 
-@media(max-width:48em) {
-  h2 {
-    font-size: 28px;
-  }
-}
-
 #about .row {
   padding: 0 0 20px 0;
   margin: 20px 0;
@@ -364,6 +366,21 @@ header .header-content .inner p {
 #about .container {
   padding: 0 100px;
 }
+
+@media(max-width:48em) {
+  h2 {
+    font-size: 28px;
+  }
+
+  #about .row {
+    padding: 0 0 10px 0;
+  }
+
+  #about .container {
+    padding: 0 35px;
+  }
+}
+
 
 /** quotes **/
 .owl-quotes i.icon {
@@ -397,7 +414,7 @@ footer {
 }
 
 #footer i:hover {
-  color: #ccc;
+  color: #eee;
 }
 
 #footer p {
@@ -429,6 +446,10 @@ footer {
     font-size: 36px;
   }
 
+  .text-title {
+    max-width: 75%;
+  }
+
 }
 /** About Page **/
 #about-main .row {
@@ -436,11 +457,64 @@ footer {
 }
 
 /** sister chapters **/
-.chapters-img {
+#sister-chapters .chapters-img {
+   display: inline-block;
    position: relative;
+   margin-bottom: 25px;
+}
+
+#sister-chapters .sister-captions {
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  color:white;
+  opacity: 0;
+
+  -webkit-transition: all 1s ease;
+     -moz-transition: all 1s ease;
+       -o-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+          transition: all 1s ease;
+}
+
+#sister-chapters h1 {
+  padding-top: 15%;
+}
+
+#sister-chapters .sister-captions:hover{
+  background-color: rgba(0,0,0,0.5);
+  opacity: 1;
+}
+
+@media(max-width:48em) {
+  #sister-chapters .sister-captions {
+    opacity: 1;
+    background-color: rgba(0,0,0,0.5);
+  }
+  #sister-chapters h1 {
+    padding-top: 10%;
+    font-size: 20px;
+  }
+}
+
+/** brothers **/
+#brothers p,
+#brothers a {
+  font-family: 'Crimson Text', serif;
+  color: #111;
+  font-size: 16px;
+  line-height: 1.2;
+  margin-top: 5px;
+}
+
+#brothers a:hover {
+  text-decoration: none;
 }
 
 /** ventures **/
+
 .gray img {
   -webkit-transition: all 1s ease;
      -moz-transition: all 1s ease;
